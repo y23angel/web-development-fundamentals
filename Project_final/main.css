@@ -1,0 +1,141 @@
+* { box-sizing: border-box;
+    margin: 0;
+}
+html{
+    font-family: Helvetica, verdana, arial;
+    background-color: #fcf1e7;
+}
+
+header { grid-area: header; }
+nav    { grid-area: nav; }
+main   { grid-area: main; }
+footer { grid-area: footer; }	
+
+nav ul { display: flex;
+flex-direction: column;
+flex-wrap: nowrap; }
+
+#wrapper{
+    width: 90%;
+	margin: auto; /*max-width: 1200px;*/
+	display: grid;
+	grid-template: 
+	"header header header"
+	"nav    main   main"
+	 "footer footer footer"
+				 / 150px; }
+   
+header { color: #00005D; 
+        background-color: #fad1aa;
+        background-image: url(./img/logo.png);
+	    background-repeat: no-repeat;		
+		background-size: auto 100%;
+        padding: .7em 0em .7em 5.5em;
+
+}
+
+main {
+    background-color: #FFFFFF;
+    color: #000000;
+    padding: 1em; 
+}
+main ul li {
+    list-style-type:circle;
+}
+
+h2 {
+    display: block;
+    justify-content: center;
+}
+
+footer { 
+    font-size:70%;
+    text-align: center;
+    padding: 0.5em 0;
+}
+
+nav{
+    background-color: #cbebc1;
+}
+
+nav ul { list-style-type: none;
+    padding-left: 0; 
+    border-top: 1px solid #EEEEEE;
+    background-color: #cbebc1;
+}
+
+nav li { border-bottom: 1px solid #EEEEEE;  
+    text-align: center;
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+nav a { text-decoration: none;
+   font-weight: bold;
+}
+nav a:link { color: #00005D; }
+nav a:hover { color: #a36fa3; }
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+.video-container {
+    overflow: hidden;
+    position:relative;
+    width: 100%;
+}
+
+.video-container::after{
+    padding-top: 56.25%;
+    display: block;
+    content: '';
+}
+
+.video-container iframe {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+}
+
+@media (max-width: 600px ) {
+    nav ul { display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around; }
+   nav ul li { border-bottom: none; }
+   header { grid-area: header; }
+   nav    { grid-area: nav; }
+   main   { grid-area: main; }
+   footer { grid-area: footer; }
+   #wrapper { 
+            width: 90%;
+            margin:auto;
+            display: grid;
+            grid-template: 
+               "header header"
+               "nav    nav" 
+               "main   main"
+               "footer footer"
+               / 55%; 
+            min-width: 430px; }
+    main {
+        text-align: center;
+    }
+    main ul li {
+        list-style-type: none;
+    }
+}

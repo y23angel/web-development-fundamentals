@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./main.css">
+	<!-- <link rel="stylesheet" media="screen and (max-width:599px)" href="lab6m.css"> -->
+    <title>JIWOO BAEK RESUME</title>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>Jiwoo's Resume</h1> <!-- 헤더는 그림으로 하는게 좋겠다 증명사진 + 타이틀-->
+        </header>   
+        <nav>
+            <ul>
+                <li><a href="./index.html">Introduce</a></li>
+                <li><a href="./work.html">Work Exp</a></li>
+                <li><a href="./skill.html">Skills</a></li>
+                <li><a href="./edu.html">Education</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        <main>
+            <h3>Contact Information</h3><br>
+            <h4>Address</h4>
+            <p>Coquitalam, BC, Canada</p><br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10410.867206069921!2d-122.8048716567457!3d49.281763219298206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54867f336a5199bb%3A0x8593ed7b2ecba9d7!2sCoquitlam%20Centre!5e0!3m2!1sen!2sca!4v1659631589512!5m2!1sen!2sca" width="450" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br><br>
+            <h4>Mobile</h4>
+            <p>778-874-0920</p><br>
+            <h4>E-mail</h4>
+            <p><a href="mailto:jwoo1604@gmail.com">jwoo1604@gmail.com</a></p><br>
+            <p>If you have a comment or question, please leave message below  </p>
+            <form method="post" action="http://webdevbasics.net/scripts/demo.php" id="usrform">
+                <fieldset>
+                    <legend>Comment</legend>
+                    <label for="fname">Name:</label>
+                    <input type="text" id="fname" name="fname"><br><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email>"><br><br>
+                    <textarea rows="4" cols="50" name="comment" form="usrform">Enter comment here...</textarea><br>
+                    <!--<button class="normal" id="myButton" value="Hover" onmouseover="mouseOver()" onmouseout="mouseOut()">Submit 2</button>-->
+                    <button id="myButton" type="submit" form="usrform" value="Hover" onmouseover="mouseOver()" onmouseout="mouseOut()">Submit</button>
+                    
+                </fieldset>
+            </form>
+        </main>
+        
+        <footer> Copyright Jiwoo Baek &copy; 2022 </footer>
+    </div>
+   <script>
+        var 
+        tag = document.getElementById("myButton");
+
+        function mouseOver(){
+		    tag.style.background = "red";
+	    };
+        function mouseOut(){
+            tag.style.background = "#e0e0e0";
+        };
+   </script>
+</body>
+</html>
